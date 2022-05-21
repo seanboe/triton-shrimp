@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Simple Markers</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./typescript/answer-stuff.ts"></script>
+    <script type="module" src="./typescript/guess.ts"></script>
+  </head>
+  <body>
+    <h1>really quick skeleton</h1>
+    <div style="width: 500px; overflow: hidden; height: 300px;">
+        <iframe 
+           src="https://www.google.com/maps/embed?pb=!4v1653156607733!6m8!1m7!1sCAoSLEFGMVFpcE5MY0FYNUE5Z1dNQ2FkcHJUTDk0OTJYdldwa2wxQVpOUjJTUnlB!2m2!1d32.8970751!2d-117.2666428!3f187.60213986306394!4f-17.326049808801244!5f0.7820865974627469"
+           width="100%"
+           height="600"
+           frameborder="0"
+           style="border:0; margin-top: -150px;">
+        </iframe>        
+      </div>
+      <h2>guess here</h2>
+      <div id="map">
+        <!-- guess screen -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjGsNmOdO9Q3_YNSQC5N4do7qnc5JdCac&callback=initMap&v=weekly" defer></script>
+      </div>
+
+    <input type="button" id="guess" value="guess here!">
+
+      <!-- <a href="/answer.html?lat1=20&lng1=20&lat2=15&lng2=10?points=0" id onclick="getMarkerPosition()">
+        <input type="button" onclick="getMarkerPosition()" id="guess-button" value="guess here!">
+      </a> -->
+
+  </body>
+</html>
