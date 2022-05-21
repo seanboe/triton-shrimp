@@ -1,8 +1,3 @@
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
 
  const queryString = window.location.search;
  const urlParams = new URLSearchParams(queryString);
@@ -25,7 +20,7 @@
     ; 
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
   var d = R * c; // Distance in km
-  return d;
+  return Math.round(d * 100 * 0.621371) / 100;
 }
 
 function deg2rad(deg) {
@@ -78,9 +73,17 @@ function initMap(): void {
 
 
   let myContainer = document.getElementById('answerlabel') as HTMLElement;
-  myContainer.innerHTML = String(getDistanceFromLatLonInKm(lat1, lng1, lat2, lng2)) + " km";
+  myContainer.innerHTML = String(getDistanceFromLatLonInKm(parseFloat(lat1!), parseFloat(lng1!), parseFloat(lat2!), parseFloat(lng2!)) + " miles off");
   
+  let guessButton = document.getElementById("play-again")
+  guessButton?.addEventListener("click", (e:Event) => playAgain())
+
 }
+
+function playAgain() {
+  location.replace("../")
+}
+
 
 declare global {
   interface Window {
