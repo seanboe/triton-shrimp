@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-
 const { resolve } = require('path')
 
 // https://vitejs.dev/config/
