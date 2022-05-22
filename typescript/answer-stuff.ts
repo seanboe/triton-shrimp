@@ -7,13 +7,14 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
  const lng1 = getIndexOfPosition(solutionPositionID).lng;
  const lat2 = urlParams.get('guessLat');
  const lng2 = urlParams.get('guessLng');
- const guessSuccessful = urlParams.get('guessSuccessful');
-
- console.log(guessSuccessful);
+ const guessSuccessful_string = urlParams.get('guessSuccessful');
+ const guessSuccessful = (guessSuccessful_string === "true")
 
  let answertitle = <HTMLInputElement>document.getElementById("answertext");
  answertitle.innerHTML = getIndexOfPosition(solutionPositionID).name;
-//  const p = urlParams.get('points');
+
+ let description = <HTMLInputElement>document.getElementById("answer-description")
+ description.innerHTML = getIndexOfPosition(solutionPositionID).description;
 
  function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   var R = 6371; // Radius of the earth in km
@@ -56,10 +57,8 @@ function initMap(): void {
     
   });
 
-  // fix thissdsfslkdjfal;ksdjf;aslkdjfl;adskjf
-
   if (guessSuccessful) {
-    console.log("right here")
+    console.log("Guess successful");
 
     new google.maps.Marker({
       position: guess,
@@ -86,6 +85,8 @@ function initMap(): void {
   
   }
   else {
+    let myContainer = document.getElementById('answerlabel') as HTMLElement;
+    myContainer.innerHTML = "No Guess!"
     console.log("unsuccessful guess")
   }
 
