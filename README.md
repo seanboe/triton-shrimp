@@ -1,7 +1,5 @@
-# Google Maps JavaScript Sample
-
-This sample is generated from @googlemaps/js-samples located at
-https://github.com/googlemaps/js-samples.
+# Coral Guesser
+### Codename "Shrimp"
 
 ## Setup
 
@@ -14,4 +12,4 @@ npm run build  # production
 ## Feedback
 
 For feedback related to this sample, please open a new issue on
-[GitHub](https://github.com/googlemaps/js-samples/issues).
+[GitHub](https://github.com/seanboe/triton-shrimp/issues).
