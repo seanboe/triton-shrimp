@@ -7,7 +7,9 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
  const lng1 = getIndexOfPosition(solutionPositionID).lng;
  const lat2 = urlParams.get('guessLat');
  const lng2 = urlParams.get('guessLng');
+ const guessSuccessful = urlParams.get('guessSuccessful');
 
+ console.log(guessSuccessful);
 
  let answertitle = <HTMLInputElement>document.getElementById("answertext");
  answertitle.innerHTML = getIndexOfPosition(solutionPositionID).name;
@@ -54,29 +56,39 @@ function initMap(): void {
     
   });
 
-  new google.maps.Marker({
-    position: guess,
-    map,
-    title: "Guess Marker",
-    label: "Guess",
-  });
+  // fix thissdsfslkdjfal;ksdjf;aslkdjfl;adskjf
 
-  const flightPlanCoordinates = [
-    answer, guess
-  ];
-  const flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    geodesic: true,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
-  flightPath.setMap(map);
+  if (guessSuccessful) {
+    console.log("right here")
+
+    new google.maps.Marker({
+      position: guess,
+      map,
+      title: "Guess Marker",
+      label: "Guess",
+    });
+
+    const flightPlanCoordinates = [
+      answer, guess
+    ];
+    const flightPath = new google.maps.Polyline({
+      path: flightPlanCoordinates,
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+    });
+    flightPath.setMap(map);
 
 
-  let myContainer = document.getElementById('answerlabel') as HTMLElement;
-  myContainer.innerHTML = String(getDistanceFromLatLonInKm(parseFloat(String(lat1)!), parseFloat(String(lng1)!), parseFloat(lat2!), parseFloat(lng2!)) + " miles off");
+    let myContainer = document.getElementById('answerlabel') as HTMLElement;
+    myContainer.innerHTML = String(getDistanceFromLatLonInKm(parseFloat(String(lat1)!), parseFloat(String(lng1)!), parseFloat(lat2!), parseFloat(lng2!)) + " miles off");
   
+  }
+  else {
+    console.log("unsuccessful guess")
+  }
+
   let guessButton = document.getElementById("play-again")
   guessButton?.addEventListener("click", (e:Event) => playAgain())
 

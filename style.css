@@ -24,10 +24,15 @@
   height: 70vh;
   margin-top: 5vh;
   margin-left: 5vw;
+  border-radius: 10px;
 }
 
 .answerstuff {
   margin-left: 10vh;
+}
+
+#answerlabel {
+  font-size: 70px;
 }
 
 .maps {
@@ -40,19 +45,20 @@
   transition-duration: 0.15s;
   box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
   opacity: 0.5;
+  
 }
 
 
 .maps:hover {
-  height: 40vh;
-  width: 50vh;
-  margin-top: 50vh;
+  height: 70vh;
+  width: 90vh;
+  margin-top: 30vh;
   box-shadow: 1px 5px 70px 5px rgba(0, 0, 0, 0.51);
   opacity: 1;
 }
 
 .desc {
-  /* margin-top: 17vh; */
+  margin-top: 3.2vh;
 }
 
 #points {
@@ -149,7 +155,8 @@ body {
 
 #guess {
   position: fixed;
-  margin-right: 50vw;
+  width: 100px;
+  margin-right: calc(50vw - 50px);
   margin-top: 85vh;
   z-index: 20;
   right: 0;
@@ -198,4 +205,22 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.cc {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition-duration: 0.15s;
+}
+.cc:hover {
+  background-color: black;
+  color: white;
 }

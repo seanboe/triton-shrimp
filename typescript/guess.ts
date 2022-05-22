@@ -8,8 +8,8 @@ function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,
     {
-      zoom: 4,
-      center: { lat: -25.363882, lng: 131.044922 },
+      zoom: 2,
+      center: { lat: 0, lng: 0 },
       mapTypeControl: false,
     }
   );
@@ -27,7 +27,7 @@ function initMap(): void {
 
   console.log("Map ID: " + solutionPosition.id);
 
-  // Open the viewing/guessing window in the random solution position
+  // Open the viewing/guessing window in the random solution position (ignore error)
   document.getElementById('mainPositionView')!.src = solutionPosition.link;
 
 }
@@ -60,16 +60,16 @@ function goToAnswer() {
 
     let solutionID = solutionPosition.id;
 
-    location.replace("/answer.html?" + "solutionID=" + solutionID + "&guessLat=" + guessLat + "&guessLng=" + guessLng)
+    location.replace("/answer.html?" + "solutionID=" + solutionID + "&guessLat=" + guessLat + "&guessLng=" + guessLng + "&guessSuccessful=true")
   }
-  else {
-    // alert("Please put down a marker first.")
+    // location.replace("/answer.html?" + "solutionID=0" + "&guessLat=1000" + "&guessLng=1000" + "&guessSuccessful=false")
+
+    alert("Please put down a marker first.")
     const box = document.getElementById('pleaseplace');
     if (box != null) {
-      box.style.visibility = 'visible';
+      // box.style.visibility = 'visible';
     }
   }
-}
 
 
 declare global {
