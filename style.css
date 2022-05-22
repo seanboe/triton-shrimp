@@ -31,12 +31,24 @@
 }
 
 .maps {
-  height: 40vh;
-  width: 50vh;
+  height: 20vh;
+  width: 30vh;
+  margin-top: 70vh;
   z-index: 99;
   position: fixed;
-  margin-top: 50vh;
   float: right;
+  transition-duration: 0.15s;
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
+  opacity: 0.5;
+}
+
+
+.maps:hover {
+  height: 40vh;
+  width: 50vh;
+  margin-top: 50vh;
+  box-shadow: 1px 5px 70px 5px rgba(0, 0, 0, 0.51);
+  opacity: 1;
 }
 
 .desc {
@@ -51,18 +63,46 @@
 }
 
 #title {
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,135,0,1) 0%, rgba(14,0,255,1) 0%, rgba(255,186,95,1) 0%, rgba(0,188,255,1) 100%, rgba(55,133,94,1) 100%, rgba(234,245,10,1) 100%, rgba(243,255,0,1) 100%);
-  color: white;
-  border:  5px solid  white;
+  background: rgba(0, 0, 0, 0.276);
+  border: 1px solid white;  color: white;
+  margin-left: 20px;
+  border-radius: 5px;
   font-style: italic;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
 
 }
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+#pleaseplace {
+  visibility: hidden;
+  position: fixed;
+  z-index: 99;
+  background: rgba(75, 75, 75, 0.585);
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
+  border: 1px solid white;
+  margin-top: 20vh;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  width: 500px;
+  height: 200px;
+  margin-left: calc(50vw - 250px);
+  
+}
+
 #timerblock {
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,135,0,1) 0%, rgba(14,0,255,1) 0%, rgba(255,186,95,1) 0%, rgba(0,188,255,1) 100%, rgba(55,133,94,1) 100%, rgba(234,245,10,1) 100%, rgba(243,255,0,1) 100%);
+  background: rgba(0, 0, 0, 0.276);
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
+  
+  border: 1px solid white;
   font-size: 50px;
   width: 70px;
   height: 70px;
@@ -70,14 +110,13 @@
   border-radius: 100%;
   margin: 0;
   top: 0;
-  border:  5px solid  white;
   color: white;
   position: fixed;
   z-index: 10;
   /* width: 100px; */
   text-align: center;
   font-style: italic;
-  margin-left: calc(50% - 70px);
+  margin-left: calc(50vw - 35px);
   margin-top: 20px;
 }
 #frame {
@@ -110,20 +149,34 @@ body {
 
 #guess {
   position: fixed;
-  margin-top: 90vh;
+  margin-right: 50vw;
+  margin-top: 85vh;
   z-index: 20;
   right: 0;
   margin-bottom: 200px;
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,135,0,1) 0%, rgba(14,0,255,1) 0%, rgba(255,186,95,1) 0%, rgba(0,188,255,1) 100%, rgba(55,133,94,1) 100%, rgba(234,245,10,1) 100%, rgba(243,255,0,1) 100%);
-  border:  2px solid  white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(0, 0, 0, 0.276);
+  
+  border: 1px solid rgb(135, 135, 135);
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-  color: white;
-  
+  color: rgb(135, 135, 135);
+  transition-duration: 0.15s;
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
 
 }
+
+#guess:hover {
+  color: white;
+  border: 1px solid white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

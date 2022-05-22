@@ -1,13 +1,13 @@
+import {getIndexOfPosition, Solution} from "./positionDataFinder";
 
  const queryString = window.location.search;
  const urlParams = new URLSearchParams(queryString);
- const lat1 = urlParams.get('lat1');
- const lng1 = urlParams.get('lng1');
- const lat2 = urlParams.get('lat2');
- const lng2 = urlParams.get('lng2');
- const p = urlParams.get('points');
-
-
+ const solutionPositionID = urlParams.get('solutionID')
+ const lat1 = getIndexOfPosition(solutionPositionID).lat;
+ const lng1 = getIndexOfPosition(solutionPositionID).lng;
+ const lat2 = urlParams.get('guessLat');
+ const lng2 = urlParams.get('guessLng');
+//  const p = urlParams.get('points');
 
  function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   var R = 6371; // Radius of the earth in km
@@ -32,7 +32,7 @@ function deg2rad(deg) {
 
 function initMap(): void {
 
-  const answer = { lat: parseFloat(lat1!), lng: parseFloat(lng1!) };
+  const answer = { lat: parseFloat(String(lat1)!), lng: parseFloat(String(lng1)!) };
   const guess = { lat: parseFloat(lat2!), lng: parseFloat(lng2!) };
 
   const map = new google.maps.Map(
@@ -73,7 +73,7 @@ function initMap(): void {
 
 
   let myContainer = document.getElementById('answerlabel') as HTMLElement;
-  myContainer.innerHTML = String(getDistanceFromLatLonInKm(parseFloat(lat1!), parseFloat(lng1!), parseFloat(lat2!), parseFloat(lng2!)) + " miles off");
+  myContainer.innerHTML = String(getDistanceFromLatLonInKm(parseFloat(String(lat1)!), parseFloat(String(lng1)!), parseFloat(lat2!), parseFloat(lng2!)) + " miles off");
   
   let guessButton = document.getElementById("play-again")
   guessButton?.addEventListener("click", (e:Event) => playAgain())
