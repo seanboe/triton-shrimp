@@ -4,6 +4,7 @@ let markers: google.maps.Marker[] = [];
 let solutionPosition: Solution;
 
 function initMap(): void {
+
   const map = new google.maps.Map(
     document.getElementById("map") as HTMLElement,
     {
@@ -24,7 +25,10 @@ function initMap(): void {
   let randomPosition = Math.trunc(Math.random() * 11);
   solutionPosition = getIndexOfPosition(randomPosition);
 
-  console.log(solutionPosition.id);
+  console.log("Map ID: " + solutionPosition.id);
+
+  // Open the viewing/guessing window in the random solution position
+  document.getElementById('mainPositionView')!.src = solutionPosition.link;
 
 }
 
@@ -46,7 +50,6 @@ function placeMarkerAndPanTo(latLng: google.maps.LatLng, map: google.maps.Map) {
   let myContainer = document.getElementById('guess') as HTMLInputElement;
   myContainer.value = "Guess!";
 
-  // window.alert(markers[markers.length - 1].getPosition())
 }
 
 function goToAnswer() {

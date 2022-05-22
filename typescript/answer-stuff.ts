@@ -7,6 +7,10 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
  const lng1 = getIndexOfPosition(solutionPositionID).lng;
  const lat2 = urlParams.get('guessLat');
  const lng2 = urlParams.get('guessLng');
+
+
+ let answertitle = <HTMLInputElement>document.getElementById("answertext");
+ answertitle.innerHTML = getIndexOfPosition(solutionPositionID).name;
 //  const p = urlParams.get('points');
 
  function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
@@ -26,8 +30,6 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
 function deg2rad(deg) {
   return deg * (Math.PI/180)
 }
-
- 
 
 
 function initMap(): void {
