@@ -96,7 +96,7 @@ function initMap(): void {
 }
 
 function playAgain() {
-  location.replace("../")
+  location.replace("./game.html")
 }
 
 

@@ -25,7 +25,7 @@ export function getIndexOfPosition(index) {
       "lat": 19.096286, 
       "lng": 72.826739, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653175077267!6m8!1m7!1sCAoSLEFGMVFpcE5WLW1lVWx4RElPMi1CaUl0RFZrWnd0SzlaVUZtbDFaWDF6Q3hC!2m2!1d19.0778842!2d72.82227499999999!3f6.12984088783624!4f-4.4909197791429705!5f0.7820865974627469",
-      "description": "Description here"
+      "description": " Juhu Beach is located in Mumbai, India and is one of the dirtiest beaches in the country. Each day, trucks and excavators attempt to remove the trash but new trash constantly washes up along the shore. Therefore, further waste-management services are required in order to make the beach clean."
     },
     "one": {
       "id":1,   
@@ -33,7 +33,7 @@ export function getIndexOfPosition(index) {
       "lat": 14.487935, 
       "lng": 120.977712, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653176302680!6m8!1m7!1sCAoSLEFGMVFpcE1yZFZPMm1YTE1UVnhnSEs1Q1pQaUU0b2lPd2FzSnlPbkM3UDlB!2m2!1d14.5560825690599!2d120.978561937809!3f283.218086020333!4f4.992403341375933!5f0.7820865974627469",
-      "description": "Description here"
+      "description": "Freedom Island is located in the Philippines, and its beach is on the top 5 list of dirtiest beaches in the world. Even though about 400 truckloads’ worth of trash was cleared from the beach, garbage continues to remain along the coastline. Thus, a more effective method of removing the trash is needed in order to make the beach habitable."
     },
     "two": { 
       "id":2,
@@ -41,7 +41,7 @@ export function getIndexOfPosition(index) {
       "lat": -24.361086, 
       "lng": -128.304109, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653175077267!6m8!1m7!1sCAoSLEFGMVFpcE5WLW1lVWx4RElPMi1CaUl0RFZrWnd0SzlaVUZtbDFaWDF6Q3hC!2m2!1d19.0778842!2d72.82227499999999!3f6.12984088783624!4f-4.4909197791429705!5f0.7820865974627469",
-      "description": "Description here"
+      "description": "Henderson Island is located in the Pitcairn Islands, a British territory situated about 3,400 miles from the coast of Chile. About 37 million articles of trash are on its beaches and certain conservation organizations have attempted to save the island from permanent damage."
     },
     "three": {
       "id":3,
@@ -49,7 +49,7 @@ export function getIndexOfPosition(index) {
       "lat": -8.725577, 
       "lng": 115.168418, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653176725361!6m8!1m7!1sCAoSK0FGMVFpcE1pTlRxSklEU0h5ZDZlRERyVFVrWWZodU9LbHk5OElLTnlOM3M.!2m2!1d-8.71702!2d115.1678578!3f319.1309317031231!4f-10.6447255445173!5f0.7820865974627469",
-      "description": "Description here"
+      "description": "Kuta Beach is located in Indonesia, the country that is ranked #2 in global marine pollution. Indonesia is known for its intense monsoon season, and coincidentally, it is during this time where the rate of trash disposal on the beach is highest. This makes Kuta Beach a target for many marine protection organizations."
     },
     "four": {
       "id":4,
@@ -57,7 +57,7 @@ export function getIndexOfPosition(index) {
       "lat": 18.389521, 
       "lng": -70.034827, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653177604565!6m8!1m7!1sCAoSLEFGMVFpcE11V1ZDa0dIZi0tSUpXdTUzaFFfRnI5R3M0NW5vNEdrbTRkYlk4!2m2!1d18.3888696!2d-70.0365439!3f19.401030740169972!4f-6.158078145601365!5f0.7820865974627469",
-      "description": "Description here"
+      "description": "Gringo Beach is located in the Dominican Republic, and is on the list of the top dirtiest beaches in the world. The beach is infamous for toxic pollution, which includes chemical and pharmaceutical contamination. Although some organizations have made attempts to clean the beach, none have been successful."
     },
     "five": {
       "id":5,
@@ -65,7 +65,7 @@ export function getIndexOfPosition(index) {
       "lat": -22.937826, 
       "lng": -43.134661, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653177887629!6m8!1m7!1sCAoSLEFGMVFpcE11N1R6TGQ2ellMa0JLZTQwOHJlNWlWckxhbFZPOGlsOVpNcVVX!2m2!1d-22.9383644!2d-43.1317335!3f16.468451207643852!4f-20.432379763336144!5f0.7820865974627469",
-      "description": "Description here"
+      "description": "Gringo Beach is located in the Dominican Republic, and is on the list of the top dirtiest beaches in the world. The beach is infamous for toxic pollution, which includes chemical and pharmaceutical contamination. Although some organizations have made attempts to clean the beach, none have been successful."
     },
     "six": {
       "id":6,
@@ -73,7 +73,7 @@ export function getIndexOfPosition(index) {
       "lat": 32.671818, 
       "lng": -117.244388, 
       "link": "https://www.google.com/maps/embed?pb=!4v1653178054550!6m8!1m7!1sCAoSLEFGMVFpcE1qRU42ZjhmSTRLUDRNbHBMTWRXbk9SWVAtdkpaTkpHYVYtT0NW!2m2!1d32.67153!2d-117.2443783!3f68.65435115496996!4f-17.789383937291007!5f0.7820865974627469",
-      "description": "Description here"
+      "description": "Guanabara Bay is located in Rio de Janeiro, Brazil. In addition to plastic pollution, its beaches have been known to contain human waste, thus making it one of the dirtiest beaches in the world. A $1.1 billion plan to clean the bay is currently in effect."
     },
     "seven": {
       "id":7,

@@ -6,71 +6,24 @@
 -->
 <html>
   <head>
-    <title>Oceans11</title>
+    <title>Home page</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./typescript/answer-stuff.ts"></script>
-    <script type="module" src="./typescript/guess.ts"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
   </head>
-  <body>
-    
-    <div id="frame" style="">
-      <div style="">
-        <iframe 
-           src="https://www.google.com/maps/embed?pb=!4v1653156607733!6m8!1m7!1sCAoSLEFGMVFpcE5MY0FYNUE5Z1dNQ2FkcHJUTDk0OTJYdldwa2wxQVpOUjJTUnlB!2m2!1d32.8970751!2d-117.2666428!3f187.60213986306394!4f-17.326049808801244!5f0.7820865974627469"
-           width="110%"
-           height="1000px"
-           frameborder="0"
-           id="mainPositionView"
-           style="border:0; margin-top: -150px; margin-left: -10px;">
-        </iframe>        
-      </div>
+  <body style="background-color: black;">
+    <div class="dots">
+      <h1>SHRIMPSHIT</h1>
+      <p class="sans">Here is some text</p>
+      <a href="./game.html">Link to the game</a>
     </div>
-    
 
-      <div id="timerblock">
-        <p id="timer">5</p>
-      </div>
-      <div id="pleaseplace">
-        <h2>Please Place a Marker!!!</h2>
-        <p>You must place a marker first before guessing.</p>
-        <input type="button" id="closewindow" value="Close">
-      </div>
+    <video autoplay muted loop id="myVideo">
+      <source src="/video/ocean_video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
 
-      <div class="topstuff">
-        <input type="button" id="guess" value="Place a Pin!">
-        <script>
-
-          function timer() {
-            let timerBlock = document.getElementById("timer");
-            let newTime = timerBlock.innerHTML - 1;
-            if (newTime < 0) {
-              location.replace("/answer.html?" + "solutionID=" + 0 + "&guessLat=" + 10 + "&guessLng=" + 10 + "&guessSuccessful=false")
-            }
-            else {
-              timerBlock.innerHTML = newTime;
-            }
-          }
-
-          var x = setInterval(timer, 1000)
-
-        </script>
-
-
-        <h1 id="title">OCEANS11</h1>
-
-      </div>
-
-
-
-      <div id="map" class="maps" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;  overflow: hidden;">
-
-        <!-- guess input -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjGsNmOdO9Q3_YNSQC5N4do7qnc5JdCac&callback=initMap&v=weekly" defer></script>        
-
-    </div>
   </body>
 </html>
