@@ -110,7 +110,7 @@ function initMap(): void {
 }
 
 function playAgain() {
-  if (parseInt(String(gameRound)) + 1 >= 6) {
+  if (parseInt(String(gameRound)) + 1 >= 4) {
     location.replace("../gameover.html?finalpoints=" + currentPoints);
   }
   else {

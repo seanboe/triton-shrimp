@@ -423,3 +423,11 @@ canvas {
 .flex-child:first-child {
   margin-right: 20px;
 } 
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+} 

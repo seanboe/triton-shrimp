@@ -15,26 +15,40 @@
   </head>
   <body style="background-color: white; ">
     <div class="dots">
-      <h1>Tritonhacks Project</h1>
-      <p class="sans">The backdrop-filter CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything behind the element, to see the effect you must make the element or its background at least partially transparent.</p>
+      <h1>Coral Guesser</h1>
+      <p class="sans">By Siddarth Calidas, Vignesh Nydhruva, Ayush Nayak, and Sean Boerhout</p>
       
 
       <div class="flex-container">
-
-        <div class="flex-child magenta">
-          <h2>game</h2>
-          <p>Oceans11 is a fun google maps-based guessing game. The player is randomly spawned into one of 11 coastal places in the world and is able to view the location in 360 degrees. Then, they have 60 seconds to guess where they are in the world with an interactive position marking system. Based on the distance between the actual location and their guess, they receive points, making this a fun game to play with others! Playing again is as simple as clicking "play again," and the player will spawn in a new location with 60 more seconds. </p>
-          <p>To teach our players about ocean conservation, each of the spawnable locations are related to ocean health or science. On the answer page, each map has a short description that includes specific background information about the location's relevance to ocean conservation efforts around the world. These include beaches where important research was conducted, coasts littered with trash, and places where illegal fishing is common. Thus, our game is more than just a game; it is an interactive instructional tool that informs players about the importance of ocean conservation around the world, from India and the Philippines to Africa and even our own Torrey Pines.</p>
-          <a href="./game.html?gameRound=1&currentPoints=0">Link to the game</a>
-        </div>
-        
         <div class="flex-child green">
-          <h2>fishing ml thing</h2>
-          <p>The backdrop-filter CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything behind the element, to see the effect you must make the element or its background at least partially transparent.</p>
+          <h2>Coral</h2>
+          <p>Coral is a software that uses machine learning to predict potential illegal fishing operations to 92% accuracy. In 
+            short, we use satellite data about unidentified vessels to predict if they are illegally fishing. Satellite data such as 
+            <a href="https://www.pewtrusts.org/en/research-and-analysis/articles/2016/03/03/how-satellite-monitoring-is-helping-catch-bad-actors">a
+            Pew trusts' Project of the seas</a> provides information about any vessels speed, course and position. Now, if an
+            agency spots a suspicious boat using that satellite data, they need to know if it is a candidate for illegal fishing. They can
+            input that data into our interface and get a reliable prediction about whether that boat is illegal, and if they should
+            intervene.</p>
+          <p>
+            Coral uses a machine learning model trained on over 4000 accurate data entries. We sourced our training and evaluation
+      data from <a href="https://globalfishingwatch.org/%22%3Ehttps://globalfishingwatch.org/">here</a>, which had datasets containing
+      historical satellite data about fishing vessels. We then used TensorFlow, a Python machine learning library by google
+      to build a model that would work on our dataset. We determined that the best kind of model would be a LinearClassifier
+      estimator which came prepackaged throught the tensorflow.estimator module. We constructed and trained this model, and then
+      exported it as a SavedModel. Now, the python backend of this website has access to that model binary and can run predictions
+      on it by constructing a 6 by 1 input tensor from your input and passing that into the compiled model. It returns a dictionary
+      of tensors that represents the prediction.
+          </p>
 
-          <a href="./game.html?gameRound=5&currentPoints=0">Link to the game</a>
+          <a href="./game.html?gameRound=5&currentPoints=0">Go to the prediction engine!</a>
         </div>
-        
+        <div class="flex-child magenta">
+          <h2>CoralGuesser</h2>
+          <p>CoralGuesser is a fun google maps-based guessing game. The player is randomly spawned into one of 11 coastal places in the world and is able to view the location in 360 degrees. Then, they have 60 seconds to guess where they are in the world with an interactive position marking system. Based on the distance between the actual location and their guess, they receive points, making this a fun game to play with others! Playing again is as simple as clicking "play again," and the player will spawn in a new location with 60 more seconds. </p>
+          <p>To teach our players about ocean conservation, each of the spawnable locations are related to ocean health or science. On the answer page, each map has a short description that includes specific background information about the location's relevance to ocean conservation efforts around the world. These include beaches where important research was conducted, coasts littered with trash, and places where illegal fishing is common. Thus, our game is more than just a game; it is an interactive instructional tool that informs players about the importance of ocean conservation around the world, from India and the Philippines to Africa and even our own Torrey Pines.</p>
+          <a href="./game.html?gameRound=1&currentPoints=0">Go to the game!</a>
+        </div>
+  
       </div>
     </div>
 
