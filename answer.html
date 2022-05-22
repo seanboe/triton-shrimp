@@ -9,13 +9,35 @@
     <title>Simple Markers</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./typescript/answer-stuff.ts"></script>
+    <script src="./styles.js"></script>
   </head>
   <body>
-    <h1>answer</h1>
-    <h2 id="answerlabel">2501 miles off</h2>
-    <div id="map"></div>
+    <!-- particles.js container --> 
+
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <div class="grid-container">
+
+      <div class="grid-child">
+        <div class="answerstuff">
+          <h1>answer</h1>
+          <h2 id="answerlabel">2501 miles off</h2>
+        </div>
+
+        <div id="map" class="map1"></div>
+      </div>
+  
+      <div class="grid-child desc">
+          <h2 id="points">+7901 POINTS</h2>
+          <h1>Sarasota Florida, United States of America</h1>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+    
+  </div>
+
 
     <!-- 
      The `defer` attribute causes the callback to execute after the full HTML
@@ -24,9 +46,10 @@
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
 
+    <button value="120"  onclick="test()">continue</button>
     <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly" defer></script>
 
-    <input type="button" value="click this" id="play-again">
+    <input type="button"  value="click this" id="play-again">
 
   </body>
 
