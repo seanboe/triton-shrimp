@@ -10,7 +10,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./typescript/answer-stuff.ts"></script>
+    <!-- <script type="module" src="./typescript/answer-stuff.ts"></script> -->
     <script type="module" src="./typescript/guess.ts"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -34,21 +34,18 @@
       <div id="timerblock">
         <p id="timer">60</p>
       </div>
-      <div id="pleaseplace">
-        <h2>Please Place a Marker!!!</h2>
-        <p>You must place a marker first before guessing.</p>
-        <input type="button" id="closewindow" value="Close">
-      </div>
+
 
       <div class="topstuff">
         <input type="button" id="guess" value="Place a Pin!">
-        <script>
 
+        <!-- Timer -->
+        <script>
           function timer() {
             let timerBlock = document.getElementById("timer");
             let newTime = timerBlock.innerHTML - 1;
             if (newTime < 0) {
-              location.replace("/answer.html?" + "solutionID=" + 0 + "&guessLat=" + 10 + "&guessLng=" + 10 + "&guessSuccessful=false")
+              // location.replace("/answer.html?" + "solutionID=" + 0 + "&guessLat=" + 10 + "&guessLng=" + 10 + "&guessSuccessful=false")
             }
             else {
               timerBlock.innerHTML = newTime;
@@ -56,14 +53,14 @@
           }
 
           var x = setInterval(timer, 1000)
-
         </script>
 
-
         <h1 id="title">OCEANS11</h1>
-
+        <div id="pointsround">
+          <h2 id="currentPoints" class="points">75</h2>
+          <h2 id="gameRound" class="roundnums">15</h2>
+        </div>
       </div>
-
 
 
       <div id="map" class="maps" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;  overflow: hidden;">

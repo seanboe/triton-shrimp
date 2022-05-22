@@ -85,6 +85,36 @@
 
 }
 
+#pointsround {
+  background: rgba(0, 0, 0, 0.276);
+  /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  border: 1px solid white;  color: white;
+  right:0;
+  border-radius: 5px;
+  font-style: italic;
+  position: fixed;
+  padding-left: 20px;
+  top: 0;
+  padding-top: 5px;
+  margin-right: 20px;
+  margin-top: 22px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
+}
+
+.points {
+  font-size: 50px;
+  margin: 0;
+  text-align: right;
+}
+
+.roundnums {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    text-align: right;
+}
+
 .show {
   display: block;
   visibility: visible;
@@ -174,7 +204,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-  color: rgb(135, 135, 135);
+  color: rgb(200, 200, 200);
   transition-duration: 0.15s;
   box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
 
@@ -242,6 +272,7 @@ canvas {
   border: 1px solid rgb(135, 135, 135);
   box-shadow: 1px 5px 10px 5px rgba(0, 0, 0, 0.22);
   padding: 20px;
+  backdrop-filter: blur(1px);
   border-bottom-right-radius: 20px;
   
 }
@@ -253,6 +284,7 @@ canvas {
 .top-right {
   /* margin-left: 20px; */
   background: rgba(0, 0, 0, 0.549);
+  backdrop-filter: blur(1px);
   position: fixed;
   max-width: 300px;
   right: 0;
@@ -288,29 +320,36 @@ canvas {
   
   position: fixed;
   z-index: -99;
-  width: 120vw;
-  height: 150vh;
+  width: 1500px;
+  /* height: 500px; */
   top: 0;
   left: 0;
-  margin-left: -20vw;
-  margin-top: -15vh;
+
   padding-left: 0;
   opacity: 0.6;
 }
 
 .dots {
   /* background: white; */
-  background-image: radial-gradient(rgba(255, 255, 255, 0.515) 1px, transparent 0);
+  /* background-image: radial-gradient(rgba(255, 255, 255, 0.515) 1px, transparent 0); */
   background-size: 40px 40px;
   background-position: -19px -19px;
   backdrop-filter: blur(2px);
   text-align: center;
-  color: white;
+  color: rgb(0, 58, 72);
   padding-top: 20px;
   padding-left: 10px;
+  /* padding-right: 39px; */
   /* position: fixed; */
-  width: 100vw;
-  height: 300vh;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dots p {
+  margin-right: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .dots h1 {
@@ -323,3 +362,27 @@ canvas {
   font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
+
+
+.flex-container {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.116);
+}  
+
+.flex-child p, a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 

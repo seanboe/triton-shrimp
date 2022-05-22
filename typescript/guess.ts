@@ -3,6 +3,18 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
 let markers: google.maps.Marker[] = [];
 let solutionPosition: Solution;
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const gameRound = urlParams.get('gameRound');
+let gameRoundHTML = <HTMLInputElement>document.getElementById("gameRound");
+gameRoundHTML.innerHTML = "Round: " + String(gameRound);
+
+const currentPoints = urlParams.get('currentPoints');
+let currentPointsHTML = <HTMLInputElement>document.getElementById("currentPoints");
+currentPointsHTML.innerHTML = "Points: " + String(currentPoints);
+
+
 function initMap(): void {
 
   const map = new google.maps.Map(
@@ -60,9 +72,8 @@ function goToAnswer() {
 
     let solutionID = solutionPosition.id;
 
-    location.replace("/answer.html?" + "solutionID=" + solutionID + "&guessLat=" + guessLat + "&guessLng=" + guessLng + "&guessSuccessful=true")
+    location.replace("/answer.html?" + "solutionID=" + solutionID + "&guessLat=" + guessLat + "&guessLng=" + guessLng + "&guessSuccessful=true" + "&currentPoints=" + currentPoints + "&gameRound=" + gameRound);
   }
-    // location.replace("/answer.html?" + "solutionID=0" + "&guessLat=1000" + "&guessLng=1000" + "&guessSuccessful=false")
 
     alert("Please put down a marker first.")
     const box = document.getElementById('pleaseplace');

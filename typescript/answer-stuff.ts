@@ -8,7 +8,18 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
  const lat2 = urlParams.get('guessLat');
  const lng2 = urlParams.get('guessLng');
  const guessSuccessful_string = urlParams.get('guessSuccessful');
- const guessSuccessful = (guessSuccessful_string === "true")
+ const guessSuccessful = (guessSuccessful_string === "true");
+
+ const offByDistance = getDistanceFromLatLonInKm(parseFloat(String(lat1)!), parseFloat(String(lng1)!), parseFloat(lat2!), parseFloat(lng2!));
+ const thisRoundPoints = Math.trunc(calcPoints(offByDistance));
+
+ const gameRound = urlParams.get('gameRound');
+ let gameRoundHTML = <HTMLInputElement>document.getElementById("gameRound");
+ gameRoundHTML.innerHTML = "Round: " + String(gameRound);
+
+ const currentPoints = parseInt(String(urlParams.get('currentPoints'))) + thisRoundPoints;
+ let currentPointsHTML = <HTMLInputElement>document.getElementById("currentPoints");
+ currentPointsHTML.innerHTML = "Points: " + String(currentPoints);
 
  let answertitle = <HTMLInputElement>document.getElementById("answertext");
  answertitle.innerHTML = getIndexOfPosition(solutionPositionID).name;
@@ -81,7 +92,7 @@ function initMap(): void {
 
 
     let myContainer = document.getElementById('answerlabel') as HTMLElement;
-    myContainer.innerHTML = String(getDistanceFromLatLonInKm(parseFloat(String(lat1)!), parseFloat(String(lng1)!), parseFloat(lat2!), parseFloat(lng2!)) + " miles off");
+    myContainer.innerHTML = (String(offByDistance) + " miles off");
   
   }
   else {
@@ -96,7 +107,17 @@ function initMap(): void {
 }
 
 function playAgain() {
-  location.replace("./game.html")
+  if (parseInt(String(gameRound)) + 1 >= 6) {
+    location.replace("../");
+  }
+  else {
+    location.replace("./game.html?&gameRound=" + (parseInt(String(gameRound)) + 1) + "&currentPoints=" + (parseInt(String(currentPoints))));
+  }
+}
+
+function calcPoints(distance) {
+  distance = parseInt(distance);
+  return 500 + Math.pow(Math.E, -((0.01*distance - 100)/10.85));
 }
 
 
