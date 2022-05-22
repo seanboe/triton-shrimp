@@ -11,7 +11,10 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
  const guessSuccessful = (guessSuccessful_string === "true");
 
  const offByDistance = getDistanceFromLatLonInKm(parseFloat(String(lat1)!), parseFloat(String(lng1)!), parseFloat(lat2!), parseFloat(lng2!));
- const thisRoundPoints = Math.trunc(calcPoints(offByDistance));
+ let thisRoundPoints = 0;
+ if (guessSuccessful) {
+  thisRoundPoints = Math.trunc(calcPoints(offByDistance));
+ }
 
  const gameRound = urlParams.get('gameRound');
  let gameRoundHTML = <HTMLInputElement>document.getElementById("gameRound");

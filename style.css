@@ -13,6 +13,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@500;600&display=swap');
 * {
     font-family: 'Bebas Neue', cursive;
+    font-weight: 200;
     
 }
 
@@ -402,6 +403,17 @@ canvas {
 .flex-child p, a {
   font-family: 'Plus Jakarta Sans', sans-serif;
 
+}
+
+
+.flex-child a {
+  color: var(--dark-color);
+  text-underline-offset: 2px;
+  /* transition-duration: 0.15s; */
+}
+
+.flex-child a:hover {
+  text-underline-offset: 5px;
 }
 
 .flex-child:first-child {
