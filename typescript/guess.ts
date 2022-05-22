@@ -34,7 +34,7 @@ function initMap(): void {
   guessButton?.addEventListener("click", (e: Event) => goToAnswer())
 
   // Random solution position
-  let randomPosition = Math.trunc(Math.random() * 11);
+  let randomPosition = Math.trunc(Math.random() * 15);
   solutionPosition = getIndexOfPosition(randomPosition);
 
   console.log("Map ID: " + solutionPosition.id);

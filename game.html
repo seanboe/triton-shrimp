@@ -32,7 +32,7 @@
     
 
       <div id="timerblock">
-        <p id="timer">60</p>
+        <p id="timer">50000</p>
       </div>
 
 
@@ -45,7 +45,7 @@
             let timerBlock = document.getElementById("timer");
             let newTime = timerBlock.innerHTML - 1;
             if (newTime < 0) {
-              // location.replace("/answer.html?" + "solutionID=" + 0 + "&guessLat=" + 10 + "&guessLng=" + 10 + "&guessSuccessful=false")
+              location.replace("/answer.html?" + "solutionID=" + 0 + "&guessLat=" + 10 + "&guessLng=" + 10 + "&guessSuccessful=false")
             }
             else {
               timerBlock.innerHTML = newTime;

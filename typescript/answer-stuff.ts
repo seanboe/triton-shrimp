@@ -19,7 +19,7 @@ import {getIndexOfPosition, Solution} from "./positionDataFinder";
 
  const currentPoints = parseInt(String(urlParams.get('currentPoints'))) + thisRoundPoints;
  let currentPointsHTML = <HTMLInputElement>document.getElementById("currentPoints");
- currentPointsHTML.innerHTML = "Points: " + String(currentPoints);
+ currentPointsHTML.innerHTML = "Points Gained: " + String(thisRoundPoints);
 
  let answertitle = <HTMLInputElement>document.getElementById("answertext");
  answertitle.innerHTML = getIndexOfPosition(solutionPositionID).name;
@@ -64,7 +64,7 @@ function initMap(): void {
     position: answer,
     map,
     title: "Answer Marker",
-    label: "Answer",
+    label: "A",
     
   });
 
@@ -75,7 +75,7 @@ function initMap(): void {
       position: guess,
       map,
       title: "Guess Marker",
-      label: "Guess",
+      label: "G",
     });
 
     const flightPlanCoordinates = [
@@ -108,7 +108,7 @@ function initMap(): void {
 
 function playAgain() {
   if (parseInt(String(gameRound)) + 1 >= 6) {
-    location.replace("../");
+    location.replace("../gameover.html?finalpoints=" + currentPoints);
   }
   else {
     location.replace("./game.html?&gameRound=" + (parseInt(String(gameRound)) + 1) + "&currentPoints=" + (parseInt(String(currentPoints))));
