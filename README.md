@@ -18,7 +18,7 @@
 [![GitHub commits](https://badgen.net/github/commits/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
 
-CoralGuesser is a fun google maps-based guessing game. The player is randomly spawned into one of 11 coastal places in the world and is able to view the location in 360 degrees. 🚀
+CoralGuesser is a fun google maps-based guessing game. The player is randomly spawned into one of 11 coastal places in the world and is able to view the location in 360 degrees. 🚀 
 
 ![](https://media.discordapp.net/attachments/969407601521590364/978045581425524796/unknown.png?width=1020&height=650)
 
@@ -68,3 +68,6 @@ For feedback related to this sample, please open a new issue on
 [GitHub](https://github.com/seanboe/triton-shrimp/issues).
 
 
+### Credits and Other Info
+
+It was made primarily by [Ayush Nayak](https://github.com/Shad0wSeven) and [myself](https://github.com/seanboe) for [Tritonhacks 2022](https://www.tritonhacks.org). Our project also included [Coral](https://github.com/seanboe/coral), made by [Siddarth Calidas](https://github.com/t3chstop) and [Vignehs Nydhruva](https://github.com/CaptMD-11) a website that uses a neural network trained on illegal fishing boats around the world to determine if a fishing boat at some arbitrary fishing point in the world and at some time is fishing illegally or not. Originally, the plan was to put CoralGuesser on a website and Coral its subdomain since they use different deployment tools (Coral uses Django and CoralGuesser uses node.js) but the build for Coral kept failing and we ran out of time to figure it out before the end of the hackathon (we were _freaking out_). Regardless, we got 2nd place and won airpods, so it worked out well anyway!
