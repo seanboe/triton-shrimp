@@ -74,8 +74,6 @@ function goToAnswer() {
 
     location.replace("/answer.html?" + "solutionID=" + solutionID + "&guessLat=" + guessLat + "&guessLng=" + guessLng + "&guessSuccessful=true" + "&currentPoints=" + currentPoints + "&gameRound=" + gameRound);
   }
-
-    alert("Please put down a marker first.")
     const box = document.getElementById('pleaseplace');
     if (box != null) {
       // box.style.visibility = 'visible';
